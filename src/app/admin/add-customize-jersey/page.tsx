@@ -38,7 +38,7 @@ const AddCustomizeJersey = () => {
 
       // Send the gallery data to your backend API
       const response = await axios?.post(
-        "http://localhost:5000/custom-jerseys",
+        "https://panda-server-eight.vercel.app/api/v1/custom-jerseys",
         galleryData
       );
 

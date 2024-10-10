@@ -12,7 +12,9 @@ export type TCustom = {
 };
 
 const fetchGallery = async () => {
-  const response = await axios.get("http://localhost:5000/custom-jerseys");
+  const response = await axios.get(
+    "https://panda-server-eight.vercel.app/api/v1/custom-jerseys"
+  );
   // Adjust based on the actual structure of your API response
   return response.data.data; // Assuming the data is inside a `data` property
 };
@@ -27,7 +29,9 @@ const CustomizeJersey = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/custom-jerseys/${id}`);
+      await axios.delete(
+        `https://panda-server-eight.vercel.app/api/v1/custom-jerseys/${id}`
+      );
       queryClient.invalidateQueries({ queryKey: ["custom"] });
     } catch (error) {
       console.error("Error deleting custom item:", error);

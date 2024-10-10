@@ -12,7 +12,9 @@ export type TFootballItem = {
 };
 
 const fetchGallery = async () => {
-  const response = await axios.get("http://localhost:5000/football-items");
+  const response = await axios.get(
+    "https://panda-server-eight.vercel.app/api/v1/football-items"
+  );
   // Adjust based on the actual structure of your API response
   return response.data.data; // Assuming the data is inside a `data` property
 };
@@ -27,7 +29,9 @@ const FootballItem = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/football-items/${id}`);
+      await axios.delete(
+        `https://panda-server-eight.vercel.app/api/v1/football-items/${id}`
+      );
       queryClient.invalidateQueries({ queryKey: ["footballItem"] });
     } catch (error) {
       console.error("Error deleting footballItem:", error);
