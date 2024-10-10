@@ -37,43 +37,6 @@ const FootballItem = () => {
 
   if (error) return <div>{error}</div>;
 
-  //   {
-  //     id: 1,
-  //     image:
-  //       "https://i.ibb.co/FJnvJrr/Whats-App-Image-2024-06-19-at-22-50-53-1baa3e4e.jpg",
-  //   },
-  //   {
-  //     id: 1,
-  //     image:
-  //       "https://i.ibb.co/FJnvJrr/Whats-App-Image-2024-06-19-at-22-50-53-1baa3e4e.jpg",
-  //   },
-  //   {
-  //     id: 1,
-  //     image:
-  //       "https://i.ibb.co/FJnvJrr/Whats-App-Image-2024-06-19-at-22-50-53-1baa3e4e.jpg",
-  //   },
-  //   {
-  //     id: 1,
-  //     image:
-  //       "https://i.ibb.co/FJnvJrr/Whats-App-Image-2024-06-19-at-22-50-53-1baa3e4e.jpg",
-  //   },
-  //   {
-  //     id: 1,
-  //     image:
-  //       "https://i.ibb.co/FJnvJrr/Whats-App-Image-2024-06-19-at-22-50-53-1baa3e4e.jpg",
-  //   },
-  //   {
-  //     id: 1,
-  //     image:
-  //       "https://i.ibb.co/FJnvJrr/Whats-App-Image-2024-06-19-at-22-50-53-1baa3e4e.jpg",
-  //   },
-  //   {
-  //     id: 1,
-  //     image:
-  //       "https://i.ibb.co/FJnvJrr/Whats-App-Image-2024-06-19-at-22-50-53-1baa3e4e.jpg",
-  //   },
-  // ];
-
   return (
     <div className="max-w-7xl mx-auto pb-6">
       <div className="flex justify-between max-w-6xl mx-auto items-center">

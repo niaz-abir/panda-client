@@ -1,11 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { GiUbisoftSun } from "react-icons/gi";
 import { MdOutlinePermPhoneMsg } from "react-icons/md";
-import { FaMailchimp, FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp } from "react-icons/fa";
 import Link from "next/link";
 import { AiOutlineMenuFold } from "react-icons/ai";
-import { SiFoodpanda, SiMailchimp } from "react-icons/si";
+import { SiFoodpanda } from "react-icons/si";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

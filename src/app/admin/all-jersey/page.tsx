@@ -4,9 +4,7 @@ import React from "react";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import Link from "next/link";
-import Jersey from "@/components/jersey";
 import { IoShirtSharp } from "react-icons/io5";
-import { BiMessageSquareDetail } from "react-icons/bi";
 
 export type TJersey = {
   _id: string;
