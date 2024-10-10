@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import { IoMdSearch } from "react-icons/io";
 import { IoShirtSharp } from "react-icons/io5";
 import { RiArrowDropDownLine } from "react-icons/ri";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
 import axios from "axios";
 import { BiMessageSquareDetail } from "react-icons/bi";
 

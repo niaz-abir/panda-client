@@ -1,10 +1,8 @@
 /* eslint-disable @next/next/no-img-element */
 "use client";
-import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+
 import axios from "axios";
-import { IoPricetagsSharp } from "react-icons/io5";
 
 export type TFootballItem = {
   _id: string;

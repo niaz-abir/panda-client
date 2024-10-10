@@ -10,7 +10,7 @@ const AddJersey = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
+  const onSubmit = async (data: any) => {
     try {
       const image = data.image[0];
       console.log(image);
