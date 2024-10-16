@@ -12,7 +12,9 @@ export type TGallery = {
 };
 
 const fetchGallery = async () => {
-  const response = await axios.get("http://localhost:5000/api/v1/gallery");
+  const response = await axios.get(
+    "https://panda-server-eight.vercel.app/api/v1/gallery"
+  );
   // Adjust based on the actual structure of your API response
   return response?.data?.data; // Assuming the data is inside a data property
 };
@@ -29,7 +31,9 @@ const AllGallery = () => {
 
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/v1/delete-gallery/${id}`);
+      await axios.delete(
+        `https://panda-server-eight.vercel.app/api/v1/delete-gallery/${id}`
+      );
       queryClient.invalidateQueries({ queryKey: ["gallery"] });
     } catch (error) {
       console.error("Error deleting gallery item:", error);

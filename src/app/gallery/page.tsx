@@ -19,9 +19,9 @@ const Gallery = () => {
     const fetchGallery = async () => {
       try {
         const response = await axios?.get(
-          "http://localhost:5000/api/v1/gallery"
+          "https://panda-server-eight.vercel.app/api/v1/gallery"
         );
-        setData(response.data); // Store data in state
+        setData(response?.data?.data); // Store data in state
         setIsLoading(false); // Set loading to false once data is fetched
       } catch (err) {
         setError("Error loading gallery"); // Set error state

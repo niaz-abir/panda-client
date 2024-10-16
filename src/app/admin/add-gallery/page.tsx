@@ -56,7 +56,7 @@ const AddGallery = () => {
 
       // Send the gallery data to your backend API
       const response = await axios?.post(
-        "http://localhost:5000/api/v1/create-gallery",
+        "https://panda-server-eight.vercel.app/api/v1/create-gallery",
         galleryData
       );
 
