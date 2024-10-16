@@ -1,34 +1,35 @@
+import Link from "next/link";
 import React from "react";
 
 const Dashboard = () => {
-  // const allDashBoardRoute = [
-  //   {
-  //     id: 1,
-  //     name: "jersey",
-  //     href: "/admin/all-jersey",
-  //   },
-  //   {
-  //     id: 3,
-  //     name: "Gallery",
-  //     href: "/admin/all-gallery",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Customize jersey",
-  //     href: "/admin/customize-jersey",
-  //   },
-  //   {
-  //     id: 4,
-  //     name: "Football Item",
-  //     href: "/admin/football-item",
-  //   },
-  // ];
+  const allDashBoardRoute = [
+    {
+      id: 1,
+      name: "jersey",
+      href: "/admin/all-jersey",
+    },
+    {
+      id: 3,
+      name: "Gallery",
+      href: "/admin/all-gallery",
+    },
+    {
+      id: 4,
+      name: "Customize jersey",
+      href: "/admin/customize-jersey",
+    },
+    {
+      id: 4,
+      name: "Football Item",
+      href: "/admin/football-item",
+    },
+  ];
   return (
     <section className="max-w-6xl mx-auto pt-14 pb-14">
       <h1 className="text-4xl pb-6 fon-bold text-center">
         Welcome In Dashboard
       </h1>
-      {/* <div className="flex justify-center">
+      <div className="flex justify-center">
         <div className="flex flex-col gap-4 w-60 ">
           {allDashBoardRoute?.map((route) => (
             <div
@@ -41,7 +42,7 @@ const Dashboard = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
