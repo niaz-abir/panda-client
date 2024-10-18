@@ -22,13 +22,29 @@ const Jersey = () => {
   const [error, setError] = useState<string | null>(null); // Error state
 
   // Fetch gallery data using axios
+  // useEffect(() => {
+  //   const fetchGallery = async () => {
+  //     try {
+  //       const response = await axios?.get(
+  //         "https://panda-server-eight.vercel.app/api/v1/jersey"
+  //       );
+  //       setData(response?.data?.data); // Store data in state
+  //       setIsLoading(false); // Set loading to false once data is fetched
+  //     } catch (err) {
+  //       setError("Error loading gallery"); // Set error state
+  //       setIsLoading(false);
+  //     }
+  //   };
+
+  //   fetchGallery();
+  // }, []);
   useEffect(() => {
     const fetchGallery = async () => {
       try {
         const response = await axios?.get(
           "https://panda-server-eight.vercel.app/api/v1/jersey"
         );
-        setData(response.data); // Store data in state
+        setData(response?.data?.data); // Store data in state
         setIsLoading(false); // Set loading to false once data is fetched
       } catch (err) {
         setError("Error loading gallery"); // Set error state
@@ -87,19 +103,21 @@ const Jersey = () => {
           <div key={jerseyCrd?._id}>
             <div className="bg-[#15222f] mb-8 hover:rounded-lg duration-300  pb-4 hover:border-none  max-w-sm">
               <div className="relative ">
-                <img src={jerseyCrd.image} alt="Product Image" />
+                <img src={jerseyCrd?.image} alt="Product Image" />
               </div>
               <div className="p-4">
                 <h2 className=" text-[28px] flex items-center gap-2 font-bold ">
                   <IoShirtSharp />
-                  {jerseyCrd.name}
+                  {jerseyCrd?.name}
                 </h2>
                 <h3 className="mb-2 font-bold">
                   Price:{" "}
                   <span className="font-semibold ">
-                    {jerseyCrd.discountPrice}
+                    {jerseyCrd?.discountPrice}
                   </span>{" "}
-                  <span className=" ml-2  line-through">{jerseyCrd.price}</span>
+                  <span className=" ml-2  line-through">
+                    {jerseyCrd?.price}
+                  </span>
                 </h3>
                 <div className="flex items-center gap-2 mb-2">
                   <h3 className="mb-2 font-bold text-[18x]">Size:</h3>

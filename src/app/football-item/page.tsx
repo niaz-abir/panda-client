@@ -22,7 +22,7 @@ const FootballItem = () => {
         const response = await axios?.get(
           "https://panda-server-eight.vercel.app/api/v1/football-item"
         );
-        setData(response.data); // Store data in state
+        setData(response?.data?.data); // Store data in state
         setIsLoading(false); // Set loading to false once data is fetched
       } catch (err) {
         setError("Error loading gallery"); // Set error state

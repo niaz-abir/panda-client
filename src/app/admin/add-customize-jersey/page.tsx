@@ -2,14 +2,11 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
 import axios from "axios";
-
 interface IFormInput {
-  name: string;
   image: FileList;
-  price: string;
 }
 
-const AddFootballItem = () => {
+const AddCustomizeJersey = () => {
   const {
     register,
     handleSubmit,
@@ -34,16 +31,14 @@ const AddFootballItem = () => {
 
       // Prepare the data to be sent to your backend
       const galleryData = {
-        name: data?.name,
         image: imageUrl,
-        price: data?.price,
       };
 
       console.log(galleryData);
 
       // Send the gallery data to your backend API
       const response = await axios?.post(
-        "https://panda-server-eight.vercel.app/api/v1/create-football-item",
+        "https://panda-server-eight.vercel.app/api/v1/create-custom-jersey",
         galleryData
       );
 
@@ -57,33 +52,19 @@ const AddFootballItem = () => {
   };
 
   return (
-    <section className="flex justify-center">
+    <section className="flex justify-center mt-8">
       <div className="relative m-10 rounded-lg shadow">
-        <div className="ml-2 lg:ml-8">
-          <h1 className="p-2 text-3xl font-bold text-center text-[#1982C4]">
-            Add Football Item
+        <div className="ml-2 lg:ml-2">
+          <h1 className="p-2 text-3xl font-bold  text-center text-[#1982C4]">
+            Add Customize jersey
           </h1>
         </div>
         <div className="space-y-6 p-6">
           <form
             action="#"
-            className="rounded-md p-6 shadow-sm shadow-[#1982C4] "
+            className="rounded-md p-6 shadow-sm shadow-[#1982C4]"
             onSubmit={handleSubmit(onSubmit)}
           >
-            <div className="flex flex-col gap-4 mb-2">
-              <div>
-                <label className="mb-2 flex items-center gap-3 text-[15px] font-medium text-white">
-                  name
-                </label>
-                <input
-                  {...register("name", { required: true })}
-                  type="text"
-                  name="name"
-                  placeholder="name"
-                  className="input input-bordered bg-gray-800 w-full max-w-xs"
-                />
-              </div>
-            </div>
             <div className="flex flex-col gap-4 mb-2">
               <div>
                 <label className="mb-2 flex items-center gap-3 text-[15px] font-medium text-white">
@@ -98,22 +79,6 @@ const AddFootballItem = () => {
                 />
               </div>
             </div>
-
-            <div className="flex flex-col gap-4 mb-2">
-              <div>
-                <label className="mb-2 flex items-center gap-3 text-[15px] font-medium text-white">
-                  price
-                </label>
-                <input
-                  {...register("price", { required: true })}
-                  type="text"
-                  name="price"
-                  placeholder="price"
-                  className="input input-bordered bg-gray-800 w-full max-w-xs"
-                />
-              </div>
-            </div>
-
             <div>
               <button
                 type="submit"
@@ -129,4 +94,4 @@ const AddFootballItem = () => {
   );
 };
 
-export default AddFootballItem;
+export default AddCustomizeJersey;
